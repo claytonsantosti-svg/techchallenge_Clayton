@@ -65,33 +65,46 @@ st.markdown("""
         display: none;
     }
     [data-testid="stSidebar"] .stRadio div[role="radiogroup"] {
-        gap: 4px !important;
+        gap: 6px !important;
         display: flex !important;
         flex-direction: column !important;
+        padding: 0 12px !important;
     }
     [data-testid="stSidebar"] .stRadio label[data-baseweb="radio"] {
-        background: rgba(255,255,255,0.04) !important;
-        border-radius: 10px !important;
-        padding: 12px 16px !important;
+        background: rgba(255,255,255,0.05) !important;
+        border-radius: 12px !important;
+        padding: 14px 18px !important;
         margin: 0 !important;
         cursor: pointer !important;
-        transition: all 0.2s !important;
-        border: 1px solid transparent !important;
+        transition: all 0.2s ease !important;
+        border: 1px solid rgba(255,255,255,0.07) !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
     }
     [data-testid="stSidebar"] .stRadio label[data-baseweb="radio"]:hover {
-        background: rgba(55,138,221,0.15) !important;
-        border-color: rgba(55,138,221,0.3) !important;
+        background: rgba(55,138,221,0.18) !important;
+        border-color: rgba(55,138,221,0.5) !important;
+        transform: translateX(3px) !important;
     }
     [data-testid="stSidebar"] .stRadio label[aria-checked="true"][data-baseweb="radio"] {
-        background: rgba(55,138,221,0.2) !important;
+        background: linear-gradient(135deg, rgba(55,138,221,0.35), rgba(83,58,183,0.25)) !important;
         border-color: #378ADD !important;
+        box-shadow: 0 0 12px rgba(55,138,221,0.25), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+        transform: translateX(3px) !important;
     }
-    [data-testid="stSidebar"] .stRadio span[data-testid="stMarkdownContainer"] p {
+    [data-testid="stSidebar"] .stRadio label[data-baseweb="radio"] p {
         font-size: 14px !important;
-        font-weight: 500 !important;
-        color: #e0e0e0 !important;
+        font-weight: 600 !important;
+        color: #c9d1d9 !important;
+        margin: 0 !important;
+        letter-spacing: 0.01em !important;
     }
-    [data-testid="stSidebar"] .stRadio [data-baseweb="radio"] div:first-child {
+    [data-testid="stSidebar"] .stRadio label[aria-checked="true"][data-baseweb="radio"] p {
+        color: #ffffff !important;
+    }
+    /* Esconde apenas o círculo do radio, mantém o texto */
+    [data-testid="stSidebar"] .stRadio label[data-baseweb="radio"] > div:first-child {
         display: none !important;
     }
 
